@@ -1,0 +1,88 @@
+.carousel-item {
+  position: relative;
+  text-align: center;
+
+
+}
+.carousel-image{
+  padding: 20px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 300px; /* Adjust as needed */
+  object-fit: contain;
+
+  
+}
+.carousel-image:hover{
+  border: 2px solid orangered;
+  background-color: lightgray;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.5); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-item:hover .overlay {
+  opacity: 1;
+}
+.overlay i{
+  font-size: 25px;
+  background-color: gainsboro;
+  padding: 0px 15px;
+  border-radius: 8px;
+}
+.overlay button {
+  margin: 5px;
+  padding: 8px;
+  background-color: orangered;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.arrow-button{
+  background-color: orangered;
+  border-radius: 28px;
+}
+.arrow-button i{
+ color: black;
+ font-size: 22px;
+}
+.shadowtext {
+  color: rgb(181 181 181 / 20%);
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 52px;
+}
+.productstitle{
+  font-size: 41px;
+  font-weight: 700 
+}
+@media screen and (max-width: 600px) {
+  .productstitle{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .shadowtext{
+    color: rgb(181 181 181 / 20%);
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 20px;
+  }
+}

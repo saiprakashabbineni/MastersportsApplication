@@ -1,0 +1,88 @@
+.containerproduct {
+    margin-top: 50px;
+  }
+  
+
+  
+  .product-description span {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .product-description h1 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .product-description p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .product-configuration {
+    margin-top: 20px;
+  }
+  
+  .product-color span,
+  .cable-config span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .color-choose div,
+  .cable-choose button {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .color-choose input {
+    display: none;
+  }
+  
+  .color-choose label span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+  }
+  
+  .color-choose input:checked + label span {
+    border-color: #333;
+  }
+  
+  .color-red {
+    background-color: red;
+  }
+  
+  .color-blue {
+    background-color: blue;
+  }
+  
+  .color-black {
+    background-color: black;
+  }
+  
+  .product-price span {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .cart-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .loading-text,
+  .error-text {
+    font-size: 18px;
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+  }
+  

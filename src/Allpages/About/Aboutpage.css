@@ -1,0 +1,32 @@
+.ReadMore-button{
+    background-color: orangered;
+    border-radius: 20px;
+    color: white;
+    letter-spacing: 2px;
+    border-style: none;
+    padding:8px 22px;
+    font-size: 17px;
+}
+
+.about-image-container {
+    position: relative;
+    width: 402px; /* Slightly larger to show the border */
+    height: 402px; /* Slightly larger to show the border */
+    border: 6px solid orangered;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .about-image-container img {
+    position: absolute;
+    top: -22px; /* Offset to show the bottom border */
+    left: -22px; /* Offset to show the right border */
+    width: 400px; /* Actual image size */
+    height: 400px /* Actual image size */
+  }
+.aboutpara{
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: justify;
+}

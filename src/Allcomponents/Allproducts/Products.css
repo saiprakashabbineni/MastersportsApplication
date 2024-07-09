@@ -1,0 +1,111 @@
+/* Container styling */
+.containerproducts {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h3 {
+  margin-bottom: 20px;
+  color: #343a40;
+  font-weight: bold;
+}
+
+/* Filter section styling */
+.form-check {
+  margin-bottom: 10px;
+}
+
+.form-check-label {
+  margin-left: 5px;
+  font-size: 1.1rem;
+  color: #495057;
+}
+
+.form-check-input:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Product card styling */
+.product-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  height: 250px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+.product-card .card-body {
+  background-color: #fff;
+  text-align: center;
+}
+
+.product-card .card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.product-card .card-text {
+  font-size: 1rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Add-to-cart button styling */
+.product-card .btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.product-card .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.product-card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.product-card .card-body {
+  animation: slideUp 0.5s ease-in-out;
+}

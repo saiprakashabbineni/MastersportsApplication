@@ -1,0 +1,52 @@
+.imagesoverlay{
+    height: 400px;
+    width: 100%;
+    box-shadow: #ccc;
+}
+
+.image-box {
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    overflow: hidden;
+    background-color: whitesmoke;
+
+}
+
+.mainoverlay{
+    margin-top: -70px;
+}
+
+ .btnoverlay {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color:tomato;
+    color: white;
+    font-size: 16px;
+    padding: 12px 34px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .textoverlay {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+ 
+    
+  
+    font-size: 38px;
+    padding: 12px 34px;
+    border: none;
+    cursor: pointer;
+  
+    text-align: center;
+    letter-spacing: 2px;
+  }
+   .btnoverlay:hover {
+    background-color: rgb(32, 163, 43);
+  }

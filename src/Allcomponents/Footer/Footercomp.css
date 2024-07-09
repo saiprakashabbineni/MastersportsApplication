@@ -1,0 +1,106 @@
+
+.footbg{
+    background-image: url("https://pstsport.com/wp-content/uploads/2020/02/all-weather-running-tracks.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:white;
+    padding-top: 2rem;
+    opacity: 1.1;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .links a{
+    padding-top: 5px;
+  
+  }
+
+  .address{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+  }
+  .address i{
+    color:#ff6600;
+  }.logo {
+    font-size: 20px; 
+    margin-right: 20px; 
+  }
+  
+  .logo span {
+    color: #ff6600; 
+  }
+  .text-left{
+    margin-left: 70px;
+  }
+/*   
+  .contact-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+  } */
+  .orange-icon {
+    color: orangered;
+    margin-right: 10px; /* Optional: adds some space between the icon and text */
+    font-size: 17px;
+}
+
+.adresssection{
+  width: 320px !important;
+ margin-left: 100px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+  padding-top: 13px; /* Adds space between items */
+}
+
+.contact-item span {
+    color: #fff; /* Adjust as needed */
+}
+  
+.circlefooter {
+    width: 35px; 
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+
+  
+  .address span {
+    display: inline-block;
+    vertical-align: middle;
+    flex-grow: 1;
+  }
+  
+  .address {
+    padding-top: 1rem;
+    border-radius: 5px;
+    
+  }
+  
+  .address b {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-item-location{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 13px;
+  
+  }
+
+  .custom-width {
+    width: 200px;
+}

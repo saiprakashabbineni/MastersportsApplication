@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import './FilteredProductsComp.css'; // Import your CSS file for styling
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { CartContext } from '../context/contextcomp';
 const FilteredProductsComp = () => {
     const [productsData, setProductsData] = useState([]);
     const [filteredProductsData, setFilteredProductsData] = useState([]);
     const [visibleProducts, setVisibleProducts] = useState(4); // Number of initially visible products
     const [currentCategory, setCurrentCategory] = useState('ALL'); // State to track current category filter
+    const { addToCart } = useContext(CartContext); // Use the context
+
     const navigate = useNavigate();
 
     const loadMorebtn = () => {
@@ -101,3 +104,7 @@ const FilteredProductsComp = () => {
 };
 
 export default FilteredProductsComp;
+
+
+
+   

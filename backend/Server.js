@@ -38,6 +38,7 @@ app.get('/products', (req, res) => {
         query += ` WHERE product_price BETWEEN ${db.escape(min)} AND ${db.escape(max)}`;
       }
     }
+    
   
     db.query(query, (err, results) => {
       if (err) {

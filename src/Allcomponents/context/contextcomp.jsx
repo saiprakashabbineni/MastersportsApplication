@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useMemo } from "react";
 
 export const CartContext = createContext();
 
@@ -7,10 +7,19 @@ export const CartProvider = ({ children }) => {
     const savedCart = localStorage.getItem('cart');
     return savedCart ? JSON.parse(savedCart) : [];
   });
+  const [selectedProduct, setSelectedProduct] = useState(null); // Placeholder for future use
 
   useEffect(() => {
     console.log('Saving cart to localStorage:', cart);
     localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
+  // Memoize the total calculation for performance optimization
+  const handletotal = useMemo(() => {
+    const total = cart.reduce((accumulator, item) => {
+      return accumulator + item.quantity * item.price;
+    }, 0);
+    return total.toFixed(2);
   }, [cart]);
 
   const addToCart = (product) => {
@@ -47,7 +56,16 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, incrementQuantity, decrementQuantity, removeFromCart }}>
+    <CartContext.Provider value={{
+      cart,
+      addToCart,
+      incrementQuantity,
+      decrementQuantity,
+      removeFromCart,
+      handletotal,
+      selectedProduct,
+      setSelectedProduct
+    }}>
       {children}
     </CartContext.Provider>
   );

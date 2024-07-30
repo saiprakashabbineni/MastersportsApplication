@@ -4,22 +4,51 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigation, useRoutes } from "react-router-dom";
 import "./Productcomponent.css";
 import { CartContext } from "../context/contextcomp";
 import { useContext } from "react";
+import { Route } from "react-router-dom";
+import { Button } from "bootstrap";
 
 const Productscomponent = () => {
-  const [productsdata, setProductsData] = useState([]);
+  const [productsdata, setProductsData] = useState([]
+  )
+  
   const [error, setError] = useState(null);
   const [cart, setCart] = useState([]);
   const sliderRef = useRef(null);
-  const { addToCart } = useContext(CartContext); // Use the context
+  const { addToCart,setSelectedProduct } = useContext(CartContext); // Use the context
+
+  // const router = useRoutes();
 
   const handleData = async () => {
     try {
       const response = await axios.get("https://fakestoreapi.com/products");
-      setProductsData(response.data);
+      // setProductsData(response.data);
+
+      // setFormData(prevFormData => ({
+      //   ...prevFormData,
+      //   [key]: value
+      // }))
+
+
+      const products = response.data.map(item => ({
+        title: item.title,
+        price: item.price,
+        category: item.category,
+        type: '' ,
+        image:item.image,
+        id:item.id // If you need to set type separately
+      }));
+  
+      // Update the state with the new array of products
+      setProductsData(products);
+
+      // setProductsData(nproduct);
+
+
+     
     } catch (err) {
       console.error(err);
       setError("Failed to load products. Please try again later.");
@@ -28,7 +57,12 @@ const Productscomponent = () => {
 
   useEffect(() => {
     handleData();
+    console.log(productsdata)
   }, []);
+
+
+
+  
 
   const settings = {
     dots: false,
@@ -108,7 +142,7 @@ const Productscomponent = () => {
                     {productsdata.map((item) => (
                       <div className="carousel-item" key={item.id}>
                         <Link
-                          to={`/singleproduct/${item.id}`}
+                        to={`/singleproduct/${item.id}`}
                           className="carousel-link"
                           style={{ color: "inherit", textDecoration: "none" }}
                         >
@@ -117,9 +151,22 @@ const Productscomponent = () => {
                           <h6 className="carousel-price">$ {item.price}</h6>
                         </Link>
                         <div className="overlay">
-                          <i className="bi bi-cart"></i>
-                          <button onClick={() => addToCart(item)}>Add to Cart</button>
+                          <i className="bi bi-cart" onClick={() => addToCart(item)}></i>
+                          <Link
+                          to={{
+                            pathname : `/checkout/${item.id}`,
+                            search: `?type=productscomp`,
+                          }}
+                          onClick={() => setSelectedProduct(item)}
+                        >
+                          <button>Buy Now</button>
+                        </Link>
+
+                          
+
+                        <Link to = {`/singleproduct/${item.id}`}>
                           <i className="bi bi-eye-fill"></i>
+                          </Link>
                         </div>
                       </div>
                     ))}
@@ -144,3 +191,7 @@ const Productscomponent = () => {
 };
 
 export default Productscomponent;
+
+
+
+

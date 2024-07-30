@@ -10,12 +10,12 @@ const Navbarcomp = () => {
       <div className="container-fluid ">
         <div className="container">
           <div className="row ">
-            <div className="col-lg-6">
+            <div className="col-lg-6 col-sm-6 col-xs-6">
               <h4 className="maintext1">
                 WELCOME TO <span className="maintext2">MASTER SPORTS</span>
               </h4>
             </div>
-            <div className="col-lg-6 col-md-6  socialicons text-end">
+            <div className="col-lg-6 col-md-6  col-sm-6 col-xs-6 socialicons text-end">
               <span className="box">A+</span>
               <span className="box">A</span>
               <span className="box">A-</span>
@@ -61,7 +61,7 @@ const Navbarcomp = () => {
                     </div>
                     <span className="contactnum">+91 1234567890</span>
                   </div>
-                  <div className="col-lg-10 col-md-12 col-sm-12 pt-4 pb-2 mainnavbar">
+                  <div className="col-lg-10 col-md-12 col-sm-12 col-xs-12 pt-4 pb-2 mainnavbar">
                   <Link to="/">HOME</Link>
                     <Link to="/aboutcomp">ABOUT US</Link>
                     <Link to="/allproducts">PRODUCTS</Link>

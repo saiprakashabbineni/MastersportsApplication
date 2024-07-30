@@ -42,6 +42,7 @@
   background-color: gainsboro;
   padding: 0px 15px;
   border-radius: 8px;
+  cursor: pointer;
 }
 .overlay button {
   margin: 5px;

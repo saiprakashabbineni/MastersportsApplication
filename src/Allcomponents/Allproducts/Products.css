@@ -1,10 +1,23 @@
 /* Container styling */
 .containerproducts {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #f8f9fa;
+ 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbarposition {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top */
+  background-color: white; /* Add background color to navbar */
+}
+
+.content {
+  margin-top: 80px; /* Adjust this value based on the navbar height */
+  overflow-y: auto;
+  padding-top: 80px; /* Ensure content does not go behind navbar */
+  position: absolute;
 }
 
 /* Header styling */
@@ -32,7 +45,7 @@ h3 {
 
 /* Product card styling */
 .product-card {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
   border: none;
   border-radius: 8px;
   overflow: hidden;
@@ -46,7 +59,8 @@ h3 {
 .product-card img {
   height: 250px;
   object-fit: contain;
-  transition: transform 0.3s ease-in-out;
+  padding: 30px 10px 0px 10px;
+ 
 }
 
 .product-card:hover img {
@@ -59,7 +73,7 @@ h3 {
 }
 
 .product-card .card-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
   color: #333;
   font-weight: bold;
@@ -108,4 +122,26 @@ h3 {
 
 .product-card .card-body {
   animation: slideUp 0.5s ease-in-out;
+}
+
+[role=tooltip].popup-content {
+  width: 200px !important;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .16) !important;
+  border-radius: 5px !important;
+}
+
+.popup-content {
+  margin: auto !important;
+  background: #de3535 !important;
+width: 100% !important;
+  padding: 5px !important;
+  border: 1px solid #d7d7d7 !important;
+  color: white;
+
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
 }
